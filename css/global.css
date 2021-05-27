@@ -1,7 +1,9 @@
 :root{
     --main-blue-color:#011d44;
+    --dark-blue:#0013338a;
     --orange:#f2a207;
     --white-color:#f7f6f5;
+    --white-border-color:#ffffff2c;
     --main-font:'lato',verdana, sans-serif,
 }
 
@@ -11,9 +13,9 @@ body{
     color:var(--white-color);
     margin:0;
 }
-main{
+/* main{
     overflow: hidden;
-}
+}  */
 #logo{
     width:65px;
     height:auto;
@@ -33,7 +35,7 @@ nav{
     left:0;
     top:0;
     bottom:50vh;
-    background-color: #011d447c;
+    background-color: #011d4485;
     z-index: 100;
 }
 nav ul li{
@@ -92,14 +94,24 @@ h3{
     color:var(--orange);
     font-size:1.3em;
     text-transform: capitalize;
-    z-index:99;
     margin-bottom:0px;
+    margin-top:0px;
+    margin-left:45%;
+}
+h4{
+    color:var(--white-color);
+    margin-left:10%;
+    font-size:1.1em;
+    padding-bottom:10px;
+    border-bottom: 1px solid var(--white-border-color);
 }
 .container-text{
-    position:relative;
-    left:5%;
-    top:100px;
-    z-index:99;
+    position: relative;
+    padding:5px 0 10px 0px;
+    max-width:300px;
+    background-color:var(--dark-blue);
+    top:115px;
+    right:0px;
 }
 p{
     color:var(--white-color);
@@ -122,20 +134,29 @@ a{
 #introduction-container p{
     line-height: 50%;
 }
+/* icons/styling images */
 #orange-brackets{
     width:35px;
     height:45px;
     margin-right:10px;
     margin-top:5px;
 }
+#equal-icon{
+    width:40px;
+    height:15px;
+    margin-left:15%;
+    margin-bottom:25px;
+}
 #designer-developer-img{
     width:175px;
     height:auto;
     position:absolute;
-    margin-left:35%;
+    margin-left:45%;
     margin-top:150px;
     z-index: 100;
 }
+/* //////////////////////////////////////////// */
+
 .background-size{
     width:100vw;
     max-width:100%;
@@ -143,74 +164,90 @@ a{
 }
 .background-img{
     background:url(/images/background-index-image.jpg)no-repeat;
-    background-position:right 55% bottom 60%;
+    background-position:right 60% bottom 60%;
     opacity: 0.35;
 }
 
 /* work containers */
-#work-container{
-    display:flex;
-    flex-flow: row wrap;
+
+.work-container{
+    width:350px;
+    max-width:80vw;
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+    margin:0px auto;
+    row-gap: 15px;
 }
-#equal-icon{
-    width:40px;
-    height:15px;
-    margin-left:10%;
+.project-container ul{
+    color:var(--white-color);
+    max-width:75%;
+    margin:0px auto;
+}
+.project-container li{
+    margin-bottom:20px;
+    list-style-type: none;
+    border-bottom: 1px solid var(--white-border-color);
+    padding-bottom:20px;
+}
+/* Creates the yellow dash for the list */
+.project-container li::before{
+    display: block;
+    float:left;
+    content: "-";
+    font-size:2em;
+    width: 1em;
+    margin-left: -1em;
+    margin-top: -12px;
+    color:#fff;
+}
+.change-list-container{
+    background-color:#00133375;
+    padding:5px 0px;
 }
 #the-bean, #csm-museum, #square-eyes{
-    position: relative;
-    margin-left:10%;
-    height:100px;
-    max-width: 90%;
-    margin-bottom:100px;
-}
-#the-bean::before{
-    content:"";
-    position:absolute;
-    background:url(/images/background-index-image.jpg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    width:300px;
+    max-width:100%;
     height:200px;
-    max-width: 90%;
-    opacity: 0.50;
-    z-index: 1;
 }
-#csm-museum::before{
-    content:"";
-    position:absolute;
-    background:url(/images/background-index-image.jpg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    width:300px;
-    height:200px;
-    max-width: 90%;
-    opacity: 0.50;
-    z-index: 1;
+#the-bean{
+    background:url(/images/main-background-left.jpg)25% 25%/cover no-repeat;
 }
-#square-eyes::before{
-    content:"";
-    position:absolute;
-    background:url(/images/background-index-image.jpg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    width:300px;
-    height:200px;
-    max-width: 90%;
-    opacity: 0.50;
-    z-index: 1;
+#csm-museum{
+    background:url(/images/newbg.jpg)25% 25%/cover no-repeat;
+}
+#square-eyes{
+    background:url(/images/Cinema.jpg)25% 25%/cover no-repeat;
 }
 .container-p{
     font-weight:500;
     margin-top:0px;
+    margin-bottom:0px;
+    margin-left:45%;
 }
-@media only screen and (min-width:350px){
 
-    h2, #the-bean, #csm-museum, #square-eyes, #equal-icon {
+/* MEDIA QUERIES */
+
+@media only screen and (min-width:500px){
+
+    h2, #equal-icon {
         margin-left:15%;
     }
-    .container-text{
-        top:125px;
+    
+}
+@media only screen and (min-width:900px){
+
+    h2, #equal-icon {
+        margin-left:15%;
+    }
+    .work-container{
+        width:90vw;
+        max-width:90vw;
+        display:flex;
+        flex-flow: row;
+        column-gap: 15px;
+    }
+    .project-container{
+        width:30%;
     }
 }
 /* #bg-pattern{
