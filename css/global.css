@@ -29,12 +29,9 @@ header{
 }
 nav{
     margin-right:20px;
-    display:none;
     position:absolute;
-    right:0;
-    left:0;
-    top:0;
-    bottom:50vh;
+    left:33.3vw;
+    display:none;
     background-color: #011d4485;
     z-index: 100;
 }
@@ -78,7 +75,7 @@ h1{
     font-weight: 400;
     width:100px;
     line-height: 100%;
-    margin-left:10%;
+    margin-left:15%;
     margin-top:50px;
     margin-bottom:10px;
     text-transform: capitalize;
@@ -108,10 +105,9 @@ h4{
 .container-text{
     position: relative;
     padding:5px 0 10px 0px;
-    max-width:300px;
+    max-width:80%;
     background-color:var(--dark-blue);
     top:115px;
-    right:0px;
 }
 p{
     color:var(--white-color);
@@ -127,7 +123,7 @@ a{
 #introduction-container{
     display: flex;
     flex-flow:row nowrap;
-    margin-left:10%;
+    margin-left:15%;
     margin-bottom:35px;
     max-width:85%;
 }
@@ -171,7 +167,7 @@ a{
 /* work containers */
 
 .work-container{
-    width:350px;
+    width:400px;
     max-width:80vw;
     display:grid;
     grid-template-rows: 1fr;
@@ -224,24 +220,36 @@ a{
     margin-bottom:0px;
     margin-left:45%;
 }
+/* FOOTER */
 
+footer{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top:75px;
+    padding-bottom: 50px;;
+}
 /* MEDIA QUERIES */
 
 @media only screen and (min-width:500px){
 
     h2, #equal-icon {
-        margin-left:15%;
+        margin-left:25%;
     }
     
 }
 @media only screen and (min-width:900px){
 
+    .background-size{
+        height:350px;
+    }
+
     h2, #equal-icon {
         margin-left:15%;
     }
     .work-container{
-        width:90vw;
-        max-width:90vw;
+        width:85vw;
+        max-width:85vw;
         display:flex;
         flex-flow: row;
         column-gap: 15px;
@@ -249,23 +257,97 @@ a{
     .project-container{
         width:30%;
     }
+    h3, .container-p{
+        margin-left:25%;
+    }
 }
-/* #bg-pattern{
-    background: url(/images/pattern.svg) right/cover no-repeat;
-    background-position:right 55% bottom 60%;;
-    width:100%;
-    height:200px;
-} */
-
-/* 
-body::before{
-    content:"";
-    background: url(/images/background-index-image.jpg) 40%/cover no-repeat;
-    position: fixed;
-    left:50vw;
-    top:0;
-    right:0;
-    bottom:0;
-    opacity:0.35;
-    z-index: 1;
-} */
+@media only screen and (min-width:1100px){
+    #logo{
+        width:75px;
+        margin-left:50px;
+    }
+    header{
+        margin-top:20px;
+    }
+    nav{
+        margin-right:5%;
+        display:inline-block;
+        position: relative;
+        background:none;
+    }
+    nav ul li{
+        display: inline;
+        margin-left:10px;
+    }
+    .bar1, .bar2, .bar3{
+        display:none;
+    }
+    h1{
+        font-size:3.5em;
+        line-height: 100%;
+        margin-top:125px;
+    }
+    h1, #introduction-container{
+        margin-left:15%;
+    }
+    h2{
+        font-size: 1.8em;
+        margin-top:200px;
+    }
+    h2, #equal-icon {
+        margin-left:15%;
+    }
+    body::before{
+        content:"";
+        background: url(/images/background-index-image.jpg) 40%/cover no-repeat;
+        position: fixed;
+        left:50vw;
+        top:0;
+        right:0;
+        bottom:0;
+        opacity:0.35;
+        z-index: 1;
+    }
+    #designer-developer-img{
+        width:225px;
+        left:28%;
+        top:30vh;
+    }
+    .background-img{
+        background:none;
+    }
+    .background-size{
+        height:0;
+    }
+    .work-container{
+        position: relative;
+        z-index:2;
+        width:1000px;
+        max-width:75vw;
+        margin-top:35px;
+    }
+    .project-container{
+        width:30%;
+    }
+    .change-list-container{
+        background-color:#001333a4;
+    }
+}
+@media only screen and (min-width:1400px){
+    h1{
+        font-size:5em;
+    }
+    h1, #introduction-container{
+        margin-left:20%;
+    }
+    h2{
+        font-size: 2.2em;
+    }
+    h2, #equal-icon {
+        margin-left:20%;
+    }
+    .work-container{
+        margin-top:25px;
+        column-gap: 35px;
+    }
+}
