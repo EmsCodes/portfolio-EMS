@@ -1,6 +1,6 @@
 :root{
     --main-blue-color:#011d44;
-    --dark-blue:#0013338a;
+    --dark-blue:#001333aa;
     --orange:#f2a207;
     --white-color:#f7f6f5;
     --white-border-color:#ffffff2c;
@@ -216,9 +216,20 @@ a{
 }
 .container-p{
     font-weight:500;
-    margin-top:0px;
+    margin-top:0;
     margin-bottom:0px;
     margin-left:45%;
+}
+.github{
+    margin-bottom:35px;
+    margin-top:35px;
+    text-align: center;
+}
+.github a{
+    color:var(--orange);
+    background-color: var(--main-blue-color);
+    padding:15px;
+    text-decoration: underline;
 }
 /* FOOTER */
 
