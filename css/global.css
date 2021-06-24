@@ -165,7 +165,28 @@ a{
 }
 
 /* work containers */
-
+.heading-flex{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+button{
+    width:45px;
+    height:45px;
+    margin-right:10%;
+    margin-top:10px;
+    border:none;
+    background-color: var(--dark-blue);
+}
+.plus-line-1, .plus-line-2{
+    width:20px;
+    height:1px;
+    background-color: #fff;
+    margin:0 auto;
+}
+.plus-line-2{
+    transform: rotate(90deg);
+}
 .work-container{
     width:400px;
     max-width:80vw;
@@ -179,6 +200,7 @@ a{
     color:var(--white-color);
     max-width:75%;
     margin:0px auto;
+    display:none;
 }
 .project-container li{
     margin-bottom:20px;
